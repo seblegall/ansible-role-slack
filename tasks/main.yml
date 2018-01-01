@@ -1,10 +1,18 @@
 ---
 - include: compat.yml
+  tags:
+    - slack
 
 - include: include_vars.yml
+  tags:
+    - slack
 
 - include: Debian.yml
   when: ansible_os_family == 'Debian'
+  tags:
+    - slack
 
 - include: RedHat.yml
   when: ansible_os_family == 'RedHat'
+  tags:
+    - slack
